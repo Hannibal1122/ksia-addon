@@ -1,0 +1,1 @@
+module.exports = require('ksia-linter/.prettierrc.js');
