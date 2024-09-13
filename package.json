@@ -11,10 +11,12 @@
     },
     "private": true,
     "dependencies": {
+        "@angular-builders/custom-webpack": "^18.0.0",
         "@angular/animations": "^17.1.0",
         "@angular/common": "^17.1.0",
         "@angular/compiler": "^17.1.0",
         "@angular/core": "^17.1.0",
+        "@angular/elements": "^18.2.4",
         "@angular/forms": "^17.1.0",
         "@angular/platform-browser": "^17.1.0",
         "@angular/platform-browser-dynamic": "^17.1.0",
@@ -22,6 +24,7 @@
         "ksia-linter": "https://github.com/Hannibal1122/ksia-linter.git",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
+        "webpack-assets-manifest": "^5.2.1",
         "zone.js": "~0.14.3"
     },
     "devDependencies": {
