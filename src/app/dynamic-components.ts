@@ -1,19 +1,13 @@
-import { Injectable, Injector } from "@angular/core";
-import { createCustomElement } from "@angular/elements";
+import { Injectable, Injector, Type } from "@angular/core";
+import { KsiaWebComponentLoader } from "@ksia-widgets";
 
-@Injectable({ providedIn: "root" })
-export class DynamicComponents {
-    constructor(private injector: Injector) {}
-
-    async define(selector: string) {
-        const component = await this.getComponent(selector);
-        if (!component) return;
-
-        const element = createCustomElement(component, { injector: this.injector });
-        customElements.define(selector, element);
+@Injectable()
+export class DynamicComponents extends KsiaWebComponentLoader {
+    constructor(protected override injector: Injector) {
+        super();
     }
 
-    async getComponent(selector: string) {
+    override async getComponent(selector: string): Promise<Type<any> | null> {
         switch (selector) {
             case "test-web-component":
                 return import("./test-web-component/test-web-component.component").then(

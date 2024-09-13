@@ -16,7 +16,7 @@
                         "customWebpackConfig": {
                             "path": "extra-webpack.config.js"
                         },
-                        "outputPath": "dist/ksia-addon-angular",
+                        "outputPath": "../ksia-data/widgets/ksia-addon-angular",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": ["zone.js"],

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
 
 @Component({
     selector: "test-web-component",
@@ -7,4 +7,12 @@ import { Component } from "@angular/core";
     standalone: true,
     imports: [],
 })
-export class TestWebComponentComponent {}
+export class TestWebComponentComponent {
+    count = signal(0);
+
+    ngOnInit() {
+        setInterval(() => {
+            this.count.update((count) => count + 1);
+        }, 1000);
+    }
+}
