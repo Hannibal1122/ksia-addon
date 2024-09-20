@@ -13,6 +13,12 @@ export class DynamicComponents extends KsiaWebComponentLoader {
                 return import("./test-web-component/test-web-component.component").then(
                     (m) => m.TestWebComponentComponent,
                 );
+            case "test-rect":
+                return import("./test-rect/test-rect.component").then((m) => m.TestRectComponent);
+            case "ksia-weather-widget":
+                return import("./ksia-weather-widget/ksia-weather-widget.component").then(
+                    (m) => m.KsiaWeatherWidgetComponent,
+                );
         }
 
         return null;
