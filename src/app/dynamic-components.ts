@@ -19,6 +19,8 @@ export class DynamicComponents extends KsiaWebComponentLoader {
                 return import("./ksia-weather-widget/ksia-weather-widget.component").then(
                     (m) => m.KsiaWeatherWidgetComponent,
                 );
+            case "ksia-map":
+                return import("./ksia-map/ksia-map.component").then((m) => m.KsiaMapComponent);
         }
 
         return null;
